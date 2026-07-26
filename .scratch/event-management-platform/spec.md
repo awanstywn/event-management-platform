@@ -92,7 +92,10 @@ The Event Management Platform is a full-stack web application that seamlessly br
 ## Git Workflow & Commit Strategy (Minimum 20 Commits Requirement)
 
 To comply with project git workflow requirements, development execution across all issue tickets must follow an atomic, incremental commit strategy guaranteeing at least **20 meaningful Conventional Commits**:
-- **Atomic Execution**: Developers and agents must split feature tickets into distinct backend, frontend, and infrastructure commits (e.g., separating Prisma schema migrations from API controllers and UI forms).
+- **Branching Strategy**: We strictly use `main` for production releases and `develop` as the active integration branch for ongoing development. Feature branches (`feature/*`) must branch off of `develop`.
+- **Branch Protection**: Direct push to the `main` branch is strictly prohibited. All feature development must be merged into `develop` via Pull Requests. Promotion to production occurs exclusively via PR from `develop` to `main`.
+- **Gitignore Standards**: The project root `.gitignore` must exclude: `node_modules`, `.env`, `dist`, and `build`.
+- **Atomic Execution**: Developers and agents must split feature tickets into distinct backend, frontend, and infrastructure commits (e.g., separating Prisma schema migrations from API controllers and UI forms) using descriptive commit messages (e.g., `feat: add pagination to product list`).
 - **25-Commit Execution Plan**:
   1. `chore(infra): initialize monorepo with next.js 15, express, and tailwind css v4` (Ticket #01)
   2. `feat(db): implement prisma schema with 11 core models and junction tables` (Ticket #01)

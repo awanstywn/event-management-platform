@@ -61,7 +61,7 @@ You and your teammate can invoke these specialized commands in your AI chat wind
 
 ## 🤖 3. How Our AI-Powered TDD Workflow Works
 
-We follow 4 golden rules to keep our development fast, bug-free, and clean:
+We follow 5 golden rules to keep our development fast, bug-free, and clean:
 
 ### Rule 1: One Ticket, One Fresh AI Session 🧼
 When starting a new ticket, **never reuse an old AI chat session**. As context windows fill up, AI models degrade and start hallucinating or forgetting architectural rules. 
@@ -86,6 +86,13 @@ We have configured GitHub Actions (`.github/workflows/ci.yml`) to enforce 5 merg
 3. **Gate 3:** Backend Integration & Unit Tests (`npm test --workspace=apps/api`)
 4. **Gate 4:** Frontend Component Tests (`npm test --workspace=apps/web`)
 5. **Gate 5:** Production Bundle Build (`npm run build`)
+
+### Rule 5: Strict Git Workflow & Branching Standards 🌿
+To comply with our project requirements (Section 4.2 Git Workflow), our team enforces the following Git standards:
+* **Branching Strategy:** We use `main` strictly for production releases and `develop` as our active development integration branch. Feature branches must be created from `develop` (e.g., `git checkout -b feature/auth develop`).
+* **No Direct Pushes to Main:** Direct pushing to the `main` branch is strictly prohibited. All feature changes must be submitted via Pull Requests targeting `develop`. Production promotions go via Pull Request from `develop` to `main`.
+* **Commit Standards:** We guarantee a **minimum of 20 meaningful commits** across our 12 issue tickets. Every commit message must use a descriptive format (e.g., `feat: add pagination to product list` or `feat(be/auth): implement login endpoint`).
+* **Gitignore Hygiene:** Our root `.gitignore` explicitly excludes `node_modules`, `.env`, `dist`, and `build` from source control.
 
 ---
 
@@ -151,10 +158,10 @@ Once Ticket 01 is merged into `main`, both teammates can work in parallel:
 
 When you sit down to start a ticket (e.g., Ticket 02), follow these exact 4 steps:
 
-1. **Pull the latest `main` branch:**
+1. **Pull the latest `develop` branch:**
    ```bash
-   git checkout main
-   git pull origin main
+   git checkout develop
+   git pull origin develop
    git checkout -b feature/issue-02-auth-and-session
    ```
 
@@ -181,7 +188,7 @@ When you sit down to start a ticket (e.g., Ticket 02), follow these exact 4 step
    ```
 
 4. **Ask AI for a final Code Review:**
-   In your chat window, prompt: *"Please run `/code-review` on my git diff against our coding standards and Ticket 02 requirements."* Once approved, push your branch and open a Pull Request!
+   In your chat window, prompt: *"Please run `/code-review` on my git diff against our coding standards and Ticket 02 requirements."* Once approved, push your branch (`git push -u origin feature/issue-02-auth-and-session`) and open a Pull Request targeting the **`develop`** branch!
 
 ---
 *Happy Coding! Let's build an extraordinary, premium Event Management Platform! 🎯🚀*

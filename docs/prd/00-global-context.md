@@ -69,6 +69,12 @@ Error: { success: false, message: string, errors?: Record<string, string> }
 
 **Currency:** IDR (Indonesian Rupiah) — all prices stored as Decimal(12,2)
 
+**Git Workflow & Branching Standards (Section 4.2):**
+- Branching: `main` for production, `develop` for active development. Feature branches (`feature/*`) must branch off of `develop`.
+- Direct push to `main` is strictly prohibited. All feature changes must merge into `develop` via PRs.
+- Minimum 20 meaningful commits required across all issue tickets using descriptive Conventional Commits (e.g. `feat: add pagination to product list` or `feat(be/auth): implement login endpoint`).
+- Root `.gitignore` must exclude: `node_modules`, `.env`, `dist`, and `build`.
+
 **AI Directive:** If any detail needed to implement this story is not explicitly stated below,
 do NOT invent a plausible default. Insert `// TODO: clarify — [what's missing]` and continue
 with the rest, or stop and ask.

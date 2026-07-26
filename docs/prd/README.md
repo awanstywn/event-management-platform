@@ -127,8 +127,13 @@ To ensure complete verification during implementation, every PRD Feature Epic ma
 
 To comply with git workflow best practices and ensure project traceability, development must follow an incremental commit strategy guaranteeing a **minimum of 20 meaningful commits**.
 
+### Branching & Protection Standards
+1. **Branching Strategy**: We strictly use `main` for production releases and `develop` as the active integration branch for ongoing development.
+2. **Branch Protection**: Direct push to the `main` branch is strictly prohibited. All feature development must occur in feature branches created from `develop` (`feature/*`) and merged into `develop` via Pull Requests. Promotion to production occurs exclusively via PR from `develop` to `main`.
+3. **Gitignore Standards**: The project root `.gitignore` must exclude: `node_modules`, `.env`, `dist`, and `build`.
+
 ### Commit Standards
-1. **Conventional Commits**: Every commit message must follow the `<type>(<scope>): <subject>` format (e.g., `feat(be/auth): implement login endpoint`, `chore(db): run prisma migrations`).
+1. **Conventional Commits**: Every commit message must follow a descriptive format like `<type>(<scope>): <subject>` (e.g., `feat(be/auth): implement login endpoint`, `chore(db): run prisma migrations`, or `feat: add pagination to product list`).
 2. **Atomic Increments**: Commits must represent self-contained, functional units of work (e.g., separating backend API implementation from frontend UI assembly). Monolithic, all-in-one commits per ticket are strictly prohibited.
 
 ### 25-Commit Execution Plan across Issue Tickets
