@@ -13,6 +13,9 @@ This document explains what we built, where everything lives, how we divide the 
 
 All project documentation is already formatted and checked into our repository. When you share or push this project to GitHub, **share the entire repository root**, especially these critical folders:
 
+### 📕 A0. Root Project README (`README.md`)
+* Located at the project root, this fulfills **Section 4.1 README requirements**. It contains our project feature summary, tech stack, Mermaid Entity Relationship Diagram (ERD), local setup guide, staging deployment URLs, and demo accounts!
+
 ### 📗 A. Product Requirements & Architecture (`docs/prd/`)
 This is our **Single Source of Truth**. Whenever you or an AI agent need to know how an endpoint behaves, what a UI looks like, or how prices are calculated, refer to these files:
 * **`00-global-context.md`**: Our tech stack (Next.js 15, Express 4, Prisma, Tailwind v4, Recharts), naming conventions, and standard API JSON response envelope. *(Pro-tip: Paste this content at the top of your AI prompts!)*
