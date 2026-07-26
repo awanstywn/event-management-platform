@@ -184,7 +184,7 @@ When you sit down to start a ticket (e.g., Ticket 02), follow these exact 4 step
 
    Please read our master rules first:
    1. **Global Context:** Read `docs/prd/00-global-context.md` for our stack rules, naming conventions, and API JSON envelope.
-   2. **Detailed User Stories:** Read `docs/prd/05-user-stories-auth.md` for our exact US-01 and US-02 acceptance criteria.
+   2. **Full Technical Specifications:** Read `docs/prd/05-user-stories-auth.md`, `docs/prd/03-api-endpoints.md`, and `docs/prd/02-database-schema.md` for our exact end-to-end technical specifications (including DTO payloads, database models, error matrices, security guards, and UI layouts)!
    3. **Commit Strategy:** Follow Rule 5 in `TEAM_HANDSHAKE_AND_WORKFLOW.md`. We must make atomic, self-contained commits with Conventional Commit messages (e.g., `feat(be/auth): implement register and login endpoints` and `feat(fe/auth): build login and registration UI pages`). Never combine backend and frontend into a single monolithic commit!
 
    Let's execute this ticket step-by-step:
