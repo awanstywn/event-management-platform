@@ -176,16 +176,22 @@ When you sit down to start a ticket (e.g., Ticket 02), follow these exact 4 step
    git checkout -b feature/issue-02-auth-and-session
    ```
 
-2. **Open a fresh AI Chat Window** in your IDE and paste this exact prompt:
+2. **Open a fresh AI Chat Window** in your IDE and paste this exact agentic prompt (using the **`/implement`** skill):
    ```markdown
-   We are implementing Ticket 02 from our issue tracker. 
-   Please read `docs/prd/00-global-context.md` for our stack rules, and read `.scratch/event-management-platform/issues/02-auth-and-session-management.md` for our task checklist.
-   
-   Let's execute this ticket using our locked TDD strategy (ADR 0002):
+   /implement `.scratch/event-management-platform/issues/02-auth-and-session-management.md`
+
+   We are implementing Ticket 02 using our locked TDD strategy (ADR 0002) and strict Conventional Commit strategy (Section 4.2).
+
+   Please read our master rules first:
+   1. **Global Context:** Read `docs/prd/00-global-context.md` for our stack rules, naming conventions, and API JSON envelope.
+   2. **Detailed User Stories:** Read `docs/prd/05-user-stories-auth.md` for our exact US-01 and US-02 acceptance criteria.
+   3. **Commit Strategy:** Follow Rule 5 in `TEAM_HANDSHAKE_AND_WORKFLOW.md`. We must make atomic, self-contained commits with Conventional Commit messages (e.g., `feat(be/auth): implement register and login endpoints` and `feat(fe/auth): build login and registration UI pages`). Never combine backend and frontend into a single monolithic commit!
+
+   Let's execute this ticket step-by-step:
    1. First, write the failing integration tests via supertest for our auth endpoints (Red).
-   2. Then implement the backend routes, controllers, and services to make tests pass (Green).
-   3. Build the Next.js UI login/register components with React Testing Library assertions.
-   
+   2. Implement the backend routes, controllers, and services to make tests pass (Green), verify, and create our backend commit!
+   3. Build the Next.js UI login/register components with React Testing Library assertions, verify, and create our frontend commit!
+
    Let's begin with Step 1!
    ```
 
