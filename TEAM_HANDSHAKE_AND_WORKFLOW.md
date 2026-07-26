@@ -16,6 +16,9 @@ All project documentation is already formatted and checked into our repository. 
 ### 📕 A0. Root Project README (`README.md`)
 * Located at the project root, this fulfills **Section 4.1 README requirements**. It contains our project feature summary, tech stack, Mermaid Entity Relationship Diagram (ERD), local setup guide, staging deployment URLs, and demo accounts!
 
+### 📙 A1. Requirements Traceability Audit Report (`TRACEABILITY_AUDIT_REPORT.md`)
+* Located at the project root, this document proves **100% requirement coverage** across all 16 pages of `miniproject-requirement.pdf`. It includes our complete master traceability matrix mapping features, edge cases, TDD seams, and CI/CD rules to our PRDs and 12 issue tickets!
+
 ### 📗 A. Product Requirements & Architecture (`docs/prd/`)
 This is our **Single Source of Truth**. Whenever you or an AI agent need to know how an endpoint behaves, what a UI looks like, or how prices are calculated, refer to these files:
 * **`00-global-context.md`**: Our tech stack (Next.js 15, Express 4, Prisma, Tailwind v4, Recharts), naming conventions, and standard API JSON response envelope. *(Pro-tip: Paste this content at the top of your AI prompts!)*

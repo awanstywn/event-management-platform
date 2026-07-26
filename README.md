@@ -147,4 +147,5 @@ We adhere strictly to **Section 4.2 Git Workflow Standards** and Matt Pocock AI 
 * **Branch Protection**: Direct pushes to `main` are strictly prohibited. All changes must pass our 5-gate CI/CD pipeline and merge via Pull Requests.
 * **Commit Requirement**: Minimum **20 meaningful Conventional Commits** guaranteed across our 12 issue tickets.
 * **Team Handshake**: For instructions on how teammates divide tickets, use AI `/implement` sessions, and execute TDD, read our root [TEAM_HANDSHAKE_AND_WORKFLOW.md](./TEAM_HANDSHAKE_AND_WORKFLOW.md).
+* **Traceability Audit**: To verify 100% requirement coverage against our grading rubric without gaps, read our root [TRACEABILITY_AUDIT_REPORT.md](./TRACEABILITY_AUDIT_REPORT.md).
 * **Technical Specs**: Read our full 9-part PRD suite in [docs/prd/README.md](./docs/prd/README.md).
