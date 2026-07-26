@@ -13,10 +13,7 @@ This document explains what we built, where everything lives, how we divide the 
 
 All project documentation is already formatted and checked into our repository. When you share or push this project to GitHub, **share the entire repository root**, especially these critical folders:
 
-### 📕 A0. Root Project README (`README.md`)
-* Located at the project root, this fulfills **Section 4.1 README requirements**. It contains our project feature summary, tech stack, Mermaid Entity Relationship Diagram (ERD), local setup guide, staging deployment URLs, and demo accounts!
-
-### 📙 A1. Requirements Traceability Audit Report (`TRACEABILITY_AUDIT_REPORT.md`)
+### 📙 A0. Requirements Traceability Audit Report (`TRACEABILITY_AUDIT_REPORT.md`)
 * Located at the project root, this document proves **100% requirement coverage** across all 16 pages of `miniproject-requirement.pdf`. It includes our complete master traceability matrix mapping features, edge cases, TDD seams, and CI/CD rules to our PRDs and 12 issue tickets!
 
 ### 📗 A. Product Requirements & Architecture (`docs/prd/`)
@@ -50,6 +47,14 @@ This entire project foundation was created using **Matt Pocock's Agentic Skills 
 1. **`/grill-with-docs`**: An interactive interview with the AI that challenged our initial assumptions, locked down edge cases, and generated our Architecture Decision Records (`ADR 0001`, `ADR 0002`) and domain glossary (`CONTEXT.md`).
 2. **`/to-spec`**: Collapsed those interview decisions into our comprehensive 9-part Product Requirements Document suite (`docs/prd/`).
 3. **`/to-tickets`**: Broke the master specification down into our 12 tracer-bullet issue tickets (`.scratch/event-management-platform/issues/`), each declaring explicit blocking dependencies and TDD checklists.
+
+### ⚡ Step 0: How Your Teammate Must Install These Skills First!
+If your teammate is cloning this project on a new machine or wants to use these commands (`/implement`, `/tdd`, `/code-review`, etc.) in their AI IDE, they must install the Matt Pocock Agentic Skills first by running this command in their terminal from the project root:
+```bash
+npx -y skills add mattpocock/skills
+# Or visit the official GitHub repository: https://github.com/mattpocock/skills
+```
+Once installed, your IDE will automatically discover the skills inside `.agents/skills/` and `.claude/skills/`!
 
 ### How Your Team Can Continue Using These Skills Daily:
 You and your teammate can invoke these specialized commands in your AI chat window at any point during development:
