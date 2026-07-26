@@ -186,6 +186,7 @@ When you sit down to start a ticket (e.g., Ticket 02), follow these exact 4 step
    1. **Global Context:** Read `docs/prd/00-global-context.md` for our stack rules, naming conventions, and API JSON envelope.
    2. **Full Technical Specifications:** Read `docs/prd/05-user-stories-auth.md`, `docs/prd/03-api-endpoints.md`, and `docs/prd/02-database-schema.md` for our exact end-to-end technical specifications (including DTO payloads, database models, error matrices, security guards, and UI layouts)!
    3. **Commit Strategy:** Follow Rule 5 in `TEAM_HANDSHAKE_AND_WORKFLOW.md`. We must make atomic, self-contained commits with Conventional Commit messages (e.g., `feat(be/auth): implement register and login endpoints` and `feat(fe/auth): build login and registration UI pages`). Never combine backend and frontend into a single monolithic commit!
+   4. **TDD & CI/CD Architecture:** Read `docs/adr/0002-tdd-strategy-and-cicd-pipeline.md` and `docs/prd/04-shared-infrastructure.md` for our locked testing rules (Jest runner, supertest HTTP seams, RTL UI seams, database isolation via `truncateAll()`, and offline SDK mocking) to ensure our code passes all 5 CI/CD verification gates (`npm run type-check`, `npm run lint`, `npm test`, `npm run build`)!
 
    Let's execute this ticket step-by-step:
    1. First, write the failing integration tests via supertest for our auth endpoints (Red).
